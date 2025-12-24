@@ -1,0 +1,123 @@
+/***************************************************************
+ 🟢 1️⃣ SUM OF FIRST 10 NUMBERS (1 to 10)
+***************************************************************/
+class WorkAtTech {
+    public static void main(String[] args) {
+        int sum = 0;
+        for(int i = 1; i <= 10; i++){
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+}
+
+
+/***************************************************************
+ 🟢 2️⃣ CUBE (Surface Area & Volume)
+***************************************************************/
+import java.util.*;
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        System.out.println((6*a*a) + " " + (a*a*a));
+    }
+}
+
+
+/***************************************************************
+ 🟢 3️⃣ SIMPLE INTEREST (Till 6 Decimal Places)
+***************************************************************/
+import java.util.*;
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double p = sc.nextDouble();
+        double r = sc.nextDouble();
+        double t = sc.nextDouble();
+        double ans = (p * r * t) / 100;
+        System.out.printf("%.6f", ans);
+    }
+}
+
+
+/***************************************************************
+ 🟢 4️⃣ CANDIES (Equally distributed or not)
+***************************************************************/
+import java.util.*;
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int candies = sc.nextInt();
+        int cousins = sc.nextInt();
+        System.out.println(candies % cousins == 0 ? "YES" : "NO");
+    }
+}
+
+
+/***************************************************************
+ 🟢 5️⃣ MILKMAN (Cylinder - Money to Pay)
+***************************************************************/
+import java.util.*;
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int r = sc.nextInt();
+        int h = sc.nextInt();
+        double volume = 3.14 * r * r * h;
+        double amount = (volume * 40) / 1000;
+        System.out.printf("%.2f", amount);
+    }
+}
+
+
+/***************************************************************
+ 🟢 6️⃣ WIN OR LOSE (Max number → even/odd)
+***************************************************************/
+import java.util.*;
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int max = Integer.MIN_VALUE;
+
+        for(int i = 0; i < n; i++){
+            max = Math.max(max, sc.nextInt());
+        }
+        System.out.println(max % 2 == 0 ? "WON" : "LOST");
+    }
+}
+
+
+/***************************************************************
+ 🟢 7️⃣ AVERAGE WEIGHT (10 inputs → avg to 6 decimals)
+***************************************************************/
+import java.util.*;
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double sum = 0;
+
+        for(int i = 0; i < 10; i++){
+            sum += sc.nextDouble();
+        }
+        System.out.printf("%.6f", sum / 10);
+    }
+}
+
+
+/***************************************************************
+ 🟢 8️⃣ ODD EVEN (T test cases)
+***************************************************************/
+import java.util.*;
+class WorkAtTech {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+
+        for(int i = 0; i < T; i++){
+            int num = sc.nextInt();
+            System.out.println(num % 2 == 0 ? "EVEN" : "ODD");
+        }
+    }
+}
