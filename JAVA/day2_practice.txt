@@ -1,0 +1,61 @@
+
+/***************************************************************
+ 🟢 1. Print Digits (T test cases)[only for 2 digit nums]
+***************************************************************/
+import java.util.*;
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int i=0;i<T;i++){
+			int n=sc.nextInt();
+			int tens=n/10; //first digit
+			int ones=n%10;//second digit
+			System.out.println(tens+" "+ones);
+		}
+		
+		// your code goes here
+	}
+}
+
+/***************************************************************
+ 🟢 2. Temperature Conversion
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int i=0;i<T;i++){
+			double n=sc.nextDouble();
+			double ans=((9*n)/5)+32;
+			System.out.printf("%.2f",ans);
+			System.out.println();
+			
+	}
+	}
+}
+
+/***************************************************************
+ 🟢 3. Triangle
+***************************************************************/
+
+Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int i=0;i<T;i++){
+			int a=sc.nextInt();
+			int b=sc.nextInt();
+			int c=sc.nextInt();
+
+			if (a+b>=c &&a+c>=b && b+c>=a){
+				System.out.println(a+b+c);
+			}
+			else{
+				System.out.println("-1");
+
+			}
+		}
