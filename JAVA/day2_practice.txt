@@ -59,3 +59,523 @@ Scanner sc=new Scanner(System.in);
 
 			}
 		}
+
+       
+/***************************************************************
+ 🟢 4.  Number Reversal
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int revnum=0;
+		int last_dig;
+		while (n!=0){
+			last_dig=n%10;
+			revnum=(revnum*10)+last_dig;
+			n=n/10;	
+			
+		}
+		System.out.println(revnum);
+	}
+}
+
+     
+/***************************************************************
+ 🟢 5.  Add One
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		String name=sc.next();
+		int age=sc.nextInt();
+		System.out.printf("Hello %s! Next year, you will be %d years old",name,age+1);
+
+	}
+}
+
+/***************************************************************
+ 🟢 6. Happy Birthday
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		String name=sc.next();
+		int year=sc.nextInt();
+		int age=0;
+		if (year<2000){
+			age=2000-year+20;
+		}
+		else{
+			age=2020-year;
+		}
+		System.out.printf("Happy Birthday %s! Your current age is %d",name,age);
+
+	}
+}
+
+/***************************************************************
+ 🟢 7. Reverse Order
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] arr= new int[n];
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextInt();
+		}
+		
+		for(int i=0;i<n;i++){
+			System.out.print(arr[n-i-1]+" ");
+            if(i != n-1) System.out.print(" "); // avoid space after last number
+
+		}
+	}
+}
+
+/***************************************************************
+ 🟢 8.  Add One
+***************************************************************/
+Write a program to print the letters of the word "WORKATTECH" with two letters in one line.
+Expected Output
+WO
+RK
+AT
+TE
+CH
+
+/***************************************************************
+ 🟢 9.  Palindrome
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int j=0;j<T;j++){
+			String s=sc.next();
+			int n=s.length();
+			int f=1;
+			for(int i=0;i<n;i++){
+				 if (s.charAt(i)!=s.charAt(n-i-1)){
+					 System.out.println("False");
+					 f=0;
+					 break;
+				 }
+			}
+			if(f==1){
+				System.out.println("True");
+			}
+			
+
+		}
+	}
+}
+/***************************************************************
+ 🟢 10.Multiplication Table
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int j=0;j<T;j++){
+			int n=sc.nextInt();
+			for (int i=1;i<=10;i++){
+				System.out.print(i*n+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+/***************************************************************
+ 🟢 11.  Add One
+
+ *
+**
+***
+****
+*****
+***************************************************************/
+
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		for (int i=1;i<=5;i++){
+			for(int j=1;j<=i;j++){
+				System.out.print("*");		
+			}
+			System.out.println();
+		}
+	}
+}
+
+/***************************************************************
+ 🟢 12.  Vowels
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		String vowels = "aeiouAEIOU";
+
+		for(int j=0;j<T;j++){
+			String n=sc.next();
+			int c=0;
+			for(int i=0;i<n.length();i++){
+				if(vowels.indexOf(n.charAt(i)) != -1){
+					c+=1;
+				}
+			}
+			System.out.println(c);
+	}
+	}
+}
+/***************************************************************
+ 🟢 13.  Pastries
+
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int q=sc.nextInt();
+		// System.out.println(n);
+
+		for(int i=0;i<q;i++){
+			// System.out.println(n);
+			int p=sc.nextInt();
+			if(n==0){
+				System.out.println("Sorry, we are all out!");	
+				
+			}
+			else if (n!=0 && n<p){
+				System.out.println("Enjoy your dessert!");
+				n=0;
+			}
+			else{	
+			System.out.println("Enjoy your dessert!");
+			n=n-p;
+			// System.out.println(n-p);
+			}
+		}
+	}
+	}
+/***************************************************************
+ 🟢 14.  High Fever
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		String[] arr=new String[T];
+		int index = 0; 
+		for(int i=0;i<T;i++){
+			String name=sc.next();
+			float temp=sc.nextFloat();
+			if (temp>98.6){
+				arr[index]=name;
+				index++;
+			}
+	}
+		for(int j=0;j<index;j++){
+			System.out.print(arr[j]);
+			if (j<index-1){
+			System.out.print(", ");
+			}
+		}
+			}
+			}
+			
+/***************************************************************
+ 🟢 15.  Square
+***************************************************************/
+
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int i=0;i<T;i++){
+			int n=sc.nextInt();
+			System.out.println(n*n);
+
+
+/***************************************************************
+ 🟢 16.  Square The Number
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int i=0;i<T;i++){
+			long n=sc.nextInt();
+			System.out.println(n*n);
+
+
+	}
+	}
+}
+
+/***************************************************************
+ 🟢 17.  Words in Sentence
+
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		String sent=sc.nextLine();
+		String[] words = sent.trim().split("\\s+");
+     //   o "\\s+" means:
+
+//➝ Split wherever there is one or more spaces/tabs/newlines.
+		System.out.println(words.length);
+	}
+}
+/***************************************************************
+ 🟢 18.  Not Divisible by 3
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int j=0;j<T;j++){
+			int n=sc.nextInt();
+			for(int i=1;i<=n;i++){
+				if (i%3!=0){
+				 System.out.printf(i+" ");
+				}
+			}
+		System.out.println();		
+	}
+}
+}
+
+/***************************************************************
+ 🟢 19.  Percentage
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		int s=0;
+		for(int j=0;j<T;j++){
+			int n=sc.nextInt();
+			s=s+n;
+	}
+		double percentage =( s * 100.0) / (T*80.0);
+	System.out.printf("%.2f%%", percentage);
+
+}
+}
+/***************************************************************
+ 🟢 20.  Adjacent Zeros
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		
+		for (int i=0;i<T;i++){
+			// int n=sc.nextInt();
+			String str = sc.next();
+			int f=0;
+			for (int j=0;j<str.length()-1;j+=1){
+				if (str.charAt(j)=='0' && str.charAt(j+1)=='0'){
+					f=1;
+					System.out.println("Yes");
+					break;
+				}
+			}
+			if(f==0){System.out.println("No");}	
+		}
+	}
+}
+
+/***************************************************************
+ 🟢 21.  Digit Sum
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for (int i=0;i<T;i++){
+			int n=sc.nextInt();
+			int s=0;
+			while (n!=0){
+				int rem=n%10;
+				s=s+rem;
+				n=n/10;
+			}
+			System.out.println(s);
+			
+			
+	}
+}
+}
+/***************************************************************
+ 🟢 22.  Armstrong Number
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for (int i=0;i<T;i++){
+			int org=sc.nextInt();
+			int n=org;
+			int s=0;
+			int rem=0;
+			while (n!=0){
+				rem=n%10;
+				s=s+rem*rem*rem;
+				n=n/10;
+			}
+			if (s==org)
+			{
+				System.out.println("Yes");
+			}
+			else{
+				System.out.println("No");
+			}
+			
+			
+			
+			
+	}
+}
+/***************************************************************
+ 🟢 23.  Fibonacci Series
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for (int i=0;i<T;i++){
+			int n=sc.nextInt();
+			int prev=0;
+			int prev1=1;
+			for (int j=0;j<n;j++){
+				int s=prev+prev1;
+				System.out.print(prev+" ");
+				prev=prev1;
+				prev1=s;
+			}
+			System.out.println();
+			
+	}
+	}
+}
+
+/***************************************************************
+ 🟢 24.  Max in Matrix
+
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int m=sc.nextInt();
+		int n=sc.nextInt();
+		int maxi=0;
+		for (int i=0;i<m;i++){
+			for(int j=0;j<n;j++){
+				int num=sc.nextInt();
+				if (num>maxi){
+					maxi=num;
+				}
+				
+			}
+	}
+		System.out.println(maxi);
+}
+}
+
+/***************************************************************
+ 🟢 25.one Character Line
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		// Scanner sc=new Scanner(System.in);
+		// String word=sc.next();
+		// for(int i=0;i<word.length();i++){
+		// 	System.out.println(word.charAt(i));
+		// }
+		String word="WORKATTECH";
+		for(int i=0;i<word.length();i++){
+			System.out.println(word.charAt(i));
+		}
+	}
+}
+
+/***************************************************************
+ 🟢 26. two Character Line
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		String word="WORKATTECH";
+		for(int i=0;i<word.length();i+=2){
+			System.out.println(word.charAt(i)+""+word.charAt(i+1));
+			
+		}
+	}
+}
