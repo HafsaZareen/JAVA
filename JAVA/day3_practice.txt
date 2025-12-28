@@ -1,0 +1,106 @@
+
+/***************************************************************
+ 🟢 1.  Digit Sum
+***************************************************************/
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int j=0;j<T;j++){
+			long fact=1;
+			int n=sc.nextInt();
+			for(int i=1;i<n+1;i++){
+				fact=fact*i;
+			}
+		System.out.println(fact);
+		}
+	}
+}
+
+/***************************************************************
+ 🟢 2. Narcissistic Number
+***************************************************************/
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int j=0;j<T;j++){
+			int orgnum=sc.nextInt();
+			int n=orgnum;
+			int m=orgnum;
+			int d=0;
+			int t=0;
+			int s=0;
+			while (n!=0){
+				t=n%10;
+				d=d+1;
+				n=n/10;			
+			}
+			int ans=0;
+			while (m!=0){
+				s=m%10;
+				ans=ans+(int)Math.pow(s,d);
+				m=m/10;
+			}
+		if (orgnum==ans){
+			System.out.println("Yes");
+		}
+		else{
+			System.out.println("No");
+		}
+		}
+	}
+}
+
+/***************************************************************
+ 🟢 3. Sum-Product Number
+***************************************************************/
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Please make sure not to delete the WorkAtTech class
+// You can create additional non-public classes as well
+// But the main method should be in the WorkAtTech class
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int j=0;j<T;j++){
+			int orgnum=sc.nextInt();
+			int n=orgnum;
+			int s=0;
+			int m=1;
+			while (n!=0){
+				int t=n%10;
+				s=t+s;
+				m=t*m;
+				n=n/10;
+			}
+			if (m*s==orgnum){
+				System.out.println("Yes");
+		}
+		else{
+			System.out.println("No");
+			}
+				
+		}
+			
+	}
+}
+/***************************************************************
+ 🟢 1.  Digit Sum
+***************************************************************/
+/***************************************************************
+ 🟢 1.  Digit Sum
+***************************************************************/
