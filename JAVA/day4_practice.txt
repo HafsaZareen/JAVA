@@ -1,0 +1,46 @@
+import java.util.*;
+class Solution {
+	int[] twoSum(int[] A, int target) {	
+		Arrays.sort(A);
+		int n=A.length-1;
+		int p=0;
+		int q=n-1;
+		while (p<q){
+			if (A[p]+A[q]==target){
+				// System.out.printf(p+""+q);
+				return new int[]{p,q};
+			}
+			else if (A[p]+A[q]<target){
+				p++;
+			}
+			else if (A[p]+A[q]>target){
+				q--;
+			}
+		}
+		return new int[]{-1,-1};
+			}
+			
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		int T= sc.nextInt();
+		Solution obj = new Solution();
+		for(int i=0;i<T;i++){
+			int n= sc.nextInt();
+			int[] A = new int[n];
+			for (int j=0;j<n;j++){
+				A[j] = sc.nextInt();
+			}
+			int target= sc.nextInt();
+			// obj.twoSum(A,target);
+			int[] result=obj.twoSum(A,target);
+			System.out.println(result[0] + " " + result[1]);
+		
+	}
+			
+		
+		sc.close();
+		
+		
+		
+	}
+}
